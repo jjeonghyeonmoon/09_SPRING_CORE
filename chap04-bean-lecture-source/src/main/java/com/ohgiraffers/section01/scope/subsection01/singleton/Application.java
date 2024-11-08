@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.scope.subsection02.prototype;
+package com.ohgiraffers.section01.scope.subsection01.singleton;
 
 import com.ohgiraffers.common.Cart;
 import com.ohgiraffers.common.Drink;

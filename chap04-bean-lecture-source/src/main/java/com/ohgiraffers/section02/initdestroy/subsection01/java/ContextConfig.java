@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.scope.subsection02.prototype;
+package com.ohgiraffers.section02.initdestroy.subsection01.java;
 
 import com.ohgiraffers.common.Cart;
 import com.ohgiraffers.common.Drink;
@@ -28,16 +28,16 @@ public class ContextConfig {
             return new Drink("밀키스",10000,250);
         }
 
+
         @Bean
-        /* comment.
-        *   @Bean 의 기본 DefaultScope 는 singleton 이다.
-        *   하지만 우리가 prototype 이라는 문자열을 @Scope 어노테이션에
-        *   전달을 하게 된다면, getBean 으로 객체를 꺼낼 때마다
-        *   새로운 인스턴스를 생성해주게 된다.
-        *   */
         @Scope("prototype")
         // 상품을 담기 위한 카트 객체 생성
     public Cart cart() {
             return new Cart();
+        }
+
+        @Bean(initMethod = "openShop", destroyMethod = "closeShop")
+        public Owner owner() {
+            return new Owner();
         }
 }

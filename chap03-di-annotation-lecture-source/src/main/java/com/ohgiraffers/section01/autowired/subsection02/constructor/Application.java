@@ -26,7 +26,7 @@ public class Application {
         // 클래스를 전달해도 되지만, 문자열을 전달하게 되면
         // 문자열이 곧 Bean 을 스캔 할 컴포넌트 스캔의 범위가 된다.
 
-        // ApplicationContext를 통해 빈을 가져오기
+        // ApplicationContext 를 통해 빈을 가져오기
         ApplicationContext context
                 = new AnnotationConfigApplicationContext("com.ohgiraffers.section01");
 
